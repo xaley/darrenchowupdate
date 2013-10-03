@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Darren Chow Updates</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/sheets.css">
+
+<script>
+jQuery.noConflict();
+(function( $ ) {
+$(document).ready(function() {
+ 
+    var div = $('#header');
+    var start = $(div).offset().top;
+ 
+    $.event.add(window, "scroll", function() {
+        var p = $(window).scrollTop();
+        $(div).css('position',((p)>start) ? 'fixed' : 'static');
+        $(div).css('top',((p)>start) ? '0px' : '');
+    });
+ 
+});
+})( jQuery );
+</script>
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+
+<!--header-->
+<table border="0" id="header" width="100%" bgcolor="#DEEEFB" style="background-color:rgba(130,194,243,0.4);">
+<TR>
+<TD valign="top">
+<p><a href="index.html"><img src="img/home.png" border="0"></a>
+</td>
+</tr>
+</table>
+<!--end header-->
+
+<p>Darren Chow is a full time writer, web developer, and Internet marketer. He graduated from the National University of Singapore and started dabbling in web design while still studying. Today, he spends his time writing for established websites and promoting websites for clients.
+
+<p><b>Internet marketing tip from Darren Chow:</b>
+
+<p>I feel that many marketers don't build a strong online presence. Simply building a website or blog is not enough. You must have a sense of identity.
+<p>In other words, in addition to your blog, you should also have video channels, Facebook pages, Google Plus pages, as well as Twitter profiles.
+<p>The goal is to allow web users to get to know you. Even if they do not buy from you today, they may buy from you a week later, a month later, or even a year later.
+You just never know. Building a strong, credible web presence is essential if you want to stay in business for the long term.
+<p>For new webmasters, I recommend issuing a <a href="http://www.epressdistribution.com">press release</a> to get the word out quickly.
+<p>Build on your content over time, share your expert knowledge, and let others recognize you as the expert in your niche.
+<p>Good luck!
+<p><br/><br/>
+Sincerely,<br/>
+Darren Chow
+
+
+
+
+</body>
+</html>

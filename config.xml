@@ -17,8 +17,8 @@
         Darren Chow
     </author>
 
-	<access origin="http://www.darrenchow.com" subdomains="true" browserOnly="false" /> 
-	<access origin="http://www.epressdistribution.com" subdomains="true" browserOnly="false" /> 
+	<!--access origin="http://www.darrenchow.com" subdomains="true" browserOnly="false" /> 
+	<access origin="http://www.epressdistribution.com" subdomains="true" browserOnly="false" /--> 
 
 	<icon src="icon.png" />
 	<gap:splash src="splash.png" />

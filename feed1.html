@@ -7,32 +7,17 @@
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
-        <script type="text/javascript" charset="utf-8">
+               <script type="text/javascript" charset="utf-8">
         $(document).on('pagebeforeshow', '#one', function(){    
             $('.news-chanel').on('click',function(e, data){    
                 rss_url_map = {
-                    'cnn-top-stories':'http://darrenchow.com/feed',
-                    'bbc-top-stories':'http://feeds.bbci.co.uk/news/rss.xml',
+                    'darren-chow':'http://darrenchow.com/feed',
+                    'kewl-skool':'http://kewlskool.com/feed',
                     'ibn-top-stories':'http://ibnlive.in.com/ibnrss/top.xml',
  
-                    'cnn-world':'http://rss.cnn.com/rss/edition_world.rss',
-                    'bbc-world':'http://feeds.bbci.co.uk/news/world/rss.xml',
-                    'ibn-world':'http://ibnlive.in.com/ibnrss/rss/world/world.xml',
- 
-                    'cnn-world-business':'http://rss.cnn.com/rss/edition_business.rss',
-                    'bbc-world-business':'http://feeds.bbci.co.uk/news/business/rss.xml',
-                    'ibn-world-business':'http://ibnlive.in.com/ibnrss/rss/business/business.xml',
- 
-                    'cnn-technology':'http://rss.cnn.com/rss/edition_technology.rss',
-                    'bbc-technology':'http://feeds.bbci.co.uk/news/technology/rss.xml',
-                    'ibn-technology':'http://ibnlive.in.com/ibnrss/rss/tech/tech.xml',
- 
-                    'cnn-world-soprts':'http://rss.cnn.com/rss/edition_sport.rss',
-                    'bbc-world-soprts':'http://news.bbc.co.uk/sport1/hi/help/rss/default.stm',
-                    'ibn-world-soprts':'http://ibnlive.in.com/ibnrss/rss/sports/sports.xml',
-                }
+             }
  
                 url = rss_url_map[this.id];
                 $.ajax({
@@ -92,55 +77,21 @@
 <!-- Start of first page: #one -->
         <div data-role="page" id="one" data-theme="a">
             <div data-role="header">
-                <h1>Connected</h1>
+                <h1>DarrenChow.com</h1>
             </div>
             <div data-role="content" data-theme="a">
                 <div data-role="collapsible-set">
                     <div data-role="collapsible">
-                        <h3>Top Stories</h3>
+                        <h3>Update Sources</h3>
                         <ul data-role="listview" data-theme="c">
-                            <li><a href="#" class="news-chanel" id="cnn-top-stories"><h2>Darren Chow</h2><p class="ui-li-aside">Darren Chow</p></a></li>
-                            <li><a href="#" class="news-chanel" id="bbc-top-stories"><h2>BBC</h2><p class="ui-li-aside">BBC</p></a></li>
-                            <li><a href="#" class="news-chanel" id="ibn-top-stories"><h2>IBN</h2><p class="ui-li-aside">IBN</p></a></li>
+                            <li><a href="#" class="news-chanel" id="darren-chow"><h2>DarrenChow.com</h2><p class="ui-li-aside">DarrenChow.com</p></a></li>
+                            <li><a href="#" class="news-chanel" id="kewl-skool"><h2>KewlSkool.com</h2><p class="ui-li-aside">KewlSkool.com</p></a></li>
                         </ul>
                     </div>
-                    <div data-role="collapsible">
-                        <h3>World</h3>
-                        <ul data-role="listview" data-theme="c">
-                            <li><a href="#" class="news-chanel" id="cnn-world"><h2>CNN</h2><p class="ui-li-aside">CNN</p></a></li>
-                            <li><a href="#" class="news-chanel" id="bbc-world"><h2>BBC</h2><p class="ui-li-aside">BBC</p></a></li>
-                            <li><a href="#" class="news-chanel" id="ibn-world"><h2>IBN</h2><p class="ui-li-aside">IBN</p></a></li>
-                        </ul>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>World Business</h3>
-                        <ul data-role="listview" data-theme="c">
-                            <li><a href="#" class="news-chanel" id="cnn-world-business"><h2>CNN</h2><p class="ui-li-aside">CNN</p></a></li>
-                            <li><a href="#" class="news-chanel" id="bbc-world-business"><h2>BBC</h2><p class="ui-li-aside">BBC</p></a></li>
-                            <li><a href="#" class="news-chanel" id="ibn-world-business"><h2>IBN</h2><p class="ui-li-aside">IBN</p></a></li>
-                        </ul>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>Technology</h3>
-                        <ul data-role="listview" data-theme="c">
-                            <li><a href="#" class="news-chanel" id="cnn-technology"><h2>CNN</h2><p class="ui-li-aside">CNN</p></a></li>
-                            <li><a href="#" class="news-chanel" id="bbc-technology"><h2>BBC</h2><p class="ui-li-aside">BBC</p></a></li>
-                            <li><a href="#" class="news-chanel" id="ibn-technology"><h2>IBN</h2><p class="ui-li-aside">IBN</p></a></li>
-                        </ul>
-                    </div>
-                    <div data-role="collapsible">
-                        <h3>World Sport</h3>
-                        <ul data-role="listview" data-theme="c">
-                            <li><a href="#" class="news-chanel" id="cnn-world-soprts"><h2>CNN</h2><p class="ui-li-aside">CNN</p></a></li>
-                            <li><a href="#" class="news-chanel" id="bbc-world-soprts"><h2>BBC</h2><p class="ui-li-aside">BBC</p></a></li>
-                            <li><a href="#" class="news-chanel" id="ibn-world-soprts"><h2>IBN</h2><p class="ui-li-aside">IBN</p></a></li>
-                        </ul>
-                    </div>
-                    <p>&nbsp;</p>
-                </div>   
+          </div>   
             </div>
             <div data-role="footer" class="bottom">
-                <h4>Page Footer</h4>
+                <h4>All Rights Reserved</h4>
             </div>
         </div><!-- /page one -->
  

@@ -23,6 +23,6 @@
 	<icon src="icon.png" />
 	<gap:splash src="splash.png" />
 
-	<gap:plugin name="ChildBrowser" />
+	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 
 </widget>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Darren Chow Updates</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/sheets.css">
+
+<script>
+jQuery.noConflict();
+(function( $ ) {
+$(document).ready(function() {
+ 
+    var div = $('#header');
+    var start = $(div).offset().top;
+ 
+    $.event.add(window, "scroll", function() {
+        var p = $(window).scrollTop();
+        $(div).css('position',((p)>start) ? 'fixed' : 'static');
+        $(div).css('top',((p)>start) ? '0px' : '');
+    });
+ 
+});
+})( jQuery );
+</script>
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+
+<!--header-->
+<table border="0" id="header" width="100%" bgcolor="#DEEEFB" style="background-color:rgba(130,194,243,0.4);">
+<TR>
+<TD valign="top">
+<p><a href="./"><img src="img/home.png" border="0"></a>
+</td>
+</tr>
+</table>
+<!--end header-->
+
+<p align="center"><a href="feed1.html" class="menu_class">DarrenChow.com</a>
+<p align="center"><a href="feed2.html" class="menu_class">KewlSkool.com</a>
+<p align="center"><a href="https://www.facebook.com/darren.chow.790" class="menu_class">Facebook</a>
+<p align="center"><a href="https://twitter.com/DarrenChow77" class="menu_class">Twitter</a>
+<p align="center"><a href="https://plus.google.com/101614447010032766348/" class="menu_class">Google+</a>
+
+
+
+</body>
+</html>

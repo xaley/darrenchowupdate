@@ -31,6 +31,7 @@ function initialize() {
 	$.mobile.showPageLoadingMsg();
 	feed.load(function(result) {
 		$.mobile.hidePageLoadingMsg();
+		console.dir(result);
 		if(!result.error) {
 			entries = result.feed.entries;
 			localStorage["entries"] = JSON.stringify(entries);
@@ -69,14 +70,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 	$("h1", this).text(entries[selectedEntry].title);
 	var contentHTML = "";
 	contentHTML += entries[selectedEntry].content;
-	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '" class="fullLink" data-role="button">Read Entry on Site</a>';
+	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '">Read Entry on Site</a>';
 	$("#entryText",this).html(contentHTML);
-	$("#entryText .fullLink",this).button();
-
 });
 	
-$(window).on("touchstart", ".fullLink", function(e) {
-	e.preventDefault();
-	window.plugins.childBrowser.showWebPage($(this).attr("href"));
-});
-

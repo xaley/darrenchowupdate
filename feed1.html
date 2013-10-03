@@ -1,81 +1,49 @@
 <html>
 <head>
 <title>Darren Chow Updates</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/sheets.css">
 
-<script>
-jQuery.noConflict();
-(function( $ ) {
-$(document).ready(function() {
- 
-    var div = $('#header');
-    var start = $(div).offset().top;
- 
-    $.event.add(window, "scroll", function() {
-        var p = $(window).scrollTop();
-        $(div).css('position',((p)>start) ? 'fixed' : 'static');
-        $(div).css('top',((p)>start) ? '0px' : '');
-    });
- 
-});
-})( jQuery );
-</script>
+<link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script src="js/jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="cordova.js"></script>
+    <script src="childbrowser.js"></script>
+    <script src="js/main.js"></script>
 
-<script type="text/javascript" src="http://www.google.com/jsapi">
-</script>
-
-<script type="text/javascript">
-google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-</script>
 
 </head>
 <body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
 
-<!--header-->
-<table border="0" id="header" width="100%" bgcolor="#DEEEFB" style="background-color:rgba(130,194,243,0.4);">
-<TR>
-<TD valign="top">
-<p><a href="./"><img src="img/home.png" border="0"></a>
-</td>
-</tr>
-</table>
-<!--end header-->
 
-<div id="feeddiv"></div>
+<div data-role="page" id="mainPage">
 
-<script type="text/javascript">
+    <div data-role="header">
+        <h1></h1>
+    </div>
 
-var feedcontainer=document.getElementById("feeddiv")
-var feedurl="http://www.darrenchow.com/feed"
-var feedlimit=20
-var rssoutput="<b>Latest:</b><br />"
+    <div data-role="content">  
+		<div id="status"></div>  
+        <ul id="linksList" data-role="listview" data-inset="true"></ul>
+    </div>
 
-function rssfeedsetup(){
-var feedpointer=new google.feeds.Feed(feedurl) //Google Feed API method
-feedpointer.setNumEntries(feedlimit) //Google Feed API method
-feedpointer.load(displayfeed) //Google Feed API method
-}
+    <div data-role="footer">
+        <h4>RSSViewer</h4>
+    </div>
 
-function displayfeed(result){
-if (!result.error){
-var thefeeds=result.feed.entries
-for (var i=0; i<thefeeds.length; i++)
+    
+</div>
 
-rssoutput+="<hr size='1' style='border-style: dashed; color: #F2F3F3;'><p><a href='" + thefeeds[i].link + "' target='_blank'>" + thefeeds[i].title + "</a><br/>" + thefeeds[i].content + "</p>"
+<div data-role="page" id="contentPage">
 
-rssoutput+=""
-feedcontainer.innerHTML=rssoutput
-}
-else
-alert("Error fetching feeds!")
-}
+    <div data-role="header">
+        <a href="#mainPage" data-rel="back">Home</a>
+        <h1></h1>
+    </div>
 
-window.onload=function(){
-rssfeedsetup()
-}
-
-</script>
+    <div data-role="content" id="entryText">
+    </div>
+        
 
 
 

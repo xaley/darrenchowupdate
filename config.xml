@@ -23,4 +23,6 @@
 	<icon src="icon.png" />
 	<gap:splash src="splash.png" />
 
+	<gap:plugin name="ChildBrowser" />
+
 </widget>

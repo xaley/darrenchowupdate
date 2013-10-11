@@ -10,12 +10,15 @@
         <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
                <script type="text/javascript" charset="utf-8">
+	
         $(document).on('pagebeforeshow', '#one', function(){    
             $('.news-chanel').on('click',function(e, data){    
+			var randomnumber=Math.floor(Math.random()*10000);
+                
                 rss_url_map = {
-                    'darren-chow':'http://darrenchow.com/feed',
-                    'kewl-skool':'http://kewlskool.com/feed',
-         
+		    'darren-chow':'http://darrenchow.com/feed?',
+                    'kewl-skool':'http://kewlskool.com/feed?' + (randomnumber),
+ 
              }
  
                 url = rss_url_map[this.id];

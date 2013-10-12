@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+
+
+<!-- Main Page -->
+<div data-role="page">
+
+		<div data-role="header">
+                <h1>Contact</h1>
+		<a href="index.html" class="ui-btn-left" rel="external">Back</a>
+            	</div>
+
+
+	<div data-role="content">
+
+	<form action="http://www.fastsubmitarticles.com/process.asp" method="post" data-ajax="false">
+		<label for="email">
+			<b>Email</b>
+			<input type="email" id="email" name="email">
+		</label>
+
+		<label for="comment">
+			<b>Comment</b>
+			<textarea id="comment" name="comment" cols="30" rows="10"></textarea>
+			<input type="hidden" id="appcheck" name="appcheck" value="pass684524@457">
+		</label>
+		
+		<input data-theme="b" type="submit" value="SEND EMAIL">
+	</form>
+	</div><!--content-->
+</div><!-- /page -->
